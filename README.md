@@ -44,7 +44,7 @@ Create a `.env` file in the root directory with the following variables:
 
 | Variable | Description | Default Value |
 |----------|-------------|---------------|
-| PORT | Server port number | 3000 |
+| API_PORT | Server port number | 9000 |
 | DATABASE_URL | PostgreSQL connection string | postgresql://postgres:postgres@localhost:5432/books |
 | NODE_ENV | Environment mode | development |
 
