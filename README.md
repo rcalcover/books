@@ -86,7 +86,7 @@ Request Body Parameters:
 |-----------|------|----------|-------------|
 | title | string | Yes | Book title |
 | author | string | Yes | Book author |
-| publishedDate | Date | Yes | Date of publication |
+| publishedDate | isoString | Yes | Date of publication |
 | genre | string | Yes | 'Fiction' or 'Non-Fiction' |
 
 #### Update Book
