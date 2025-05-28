@@ -67,7 +67,7 @@ describe('BooksService', () => {
         publishedDate: new Date(),
         genre: 'Fiction',
       };
-      const {genre, ...rest} = newBook;
+      const { genre, ...rest } = newBook;
 
       const createdBook = { id: '1', ...newBook };
       repository.create.mockResolvedValue(createdBook);

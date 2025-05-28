@@ -1,4 +1,4 @@
-import z, { ZodSchema } from 'zod';
+import { ZodSchema } from 'zod';
 import { prettifyError } from 'zod/v4';
 import { Request, Response, NextFunction } from 'express';
 import { logger } from '../utils/logger';

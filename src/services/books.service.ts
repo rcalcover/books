@@ -1,6 +1,10 @@
 import { BooksRepository } from '../repositories/books.repository';
 import { Book, NewBook } from '../db/schema/books.schema';
-import { BookFactory, BookGenre, BookTemplate } from '../factories/book.factory';
+import {
+  BookFactory,
+  BookGenre,
+  BookTemplate,
+} from '../factories/book.factory';
 
 export class BooksService {
   constructor(private repository: BooksRepository) {}

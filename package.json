@@ -8,7 +8,7 @@
     "build": "tsc",
     "start": "node dist/app.js",
     "test": "jest",
-    "lint": "eslint . --ext .ts",
+    "lint": "eslint -c eslint.config.mjs src/**/*.ts",
     "format": "prettier --write \"src/**/*.ts\"",
     "seed": "ts-node src/db/seeders/index.ts",
     "migrate": "drizzle-kit migrate"

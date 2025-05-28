@@ -2,7 +2,7 @@ import { NewBook } from '../db/schema/books.schema';
 
 export enum BookGenre {
   FICTION = 'Fiction',
-  NON_FICTION = 'Non-Fiction'
+  NON_FICTION = 'Non-Fiction',
 }
 
 export interface BookTemplate {
@@ -26,14 +26,14 @@ export class BookFactory {
   private static createFictionBook(template: BookTemplate): NewBook {
     return {
       ...template,
-      genre: BookGenre.FICTION
+      genre: BookGenre.FICTION,
     };
   }
 
   private static createNonFictionBook(template: BookTemplate): NewBook {
     return {
       ...template,
-      genre: BookGenre.NON_FICTION
+      genre: BookGenre.NON_FICTION,
     };
   }
 }
