@@ -103,5 +103,5 @@ curl -X PUT http://localhost:9000/api/books/:id \
 
 #### Delete Book
 ```bash
-curl -X DELETE http://localhost:9000/api/books/:uuid
+curl -X DELETE http://localhost:9000/api/books/:id
 ```
