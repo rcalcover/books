@@ -66,7 +66,7 @@ curl -X GET http://localhost:9000/api/books
 
 #### Get Book by ID
 ```bash
-curl -X GET http://localhost:9000/api/books/:uuid
+curl -X GET http://localhost:9000/api/books/:id
 ```
 
 #### Create Book
@@ -91,7 +91,7 @@ Request Body Parameters:
 
 #### Update Book
 ```bash
-curl -X PUT http://localhost:9000/api/books/ \
+curl -X PUT http://localhost:9000/api/books/:id \
   -H "Content-Type: application/json" \
   -d '{
     "title": "Updated Title",
