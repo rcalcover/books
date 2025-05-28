@@ -61,22 +61,22 @@ NODE_ENV=development
 
 #### Get All Books
 ```bash
-curl -X GET http://localhost:3000/api/books
+curl -X GET http://localhost:9000/api/books
 ```
 
 #### Get Book by ID
 ```bash
-curl -X GET http://localhost:3000/api/books/:uuid
+curl -X GET http://localhost:9000/api/books/:uuid
 ```
 
 #### Create Book
 ```bash
-curl -X POST http://localhost:3000/api/books \
+curl -X POST http://localhost:9000/api/books \
   -H "Content-Type: application/json" \
   -d '{
     "title": "The Great Gatsby",
     "author": "F. Scott Fitzgerald",
-    "publishedYear": 1925,
+    "publishedDate": "1925-04-10T00:00:00.000Z",
     "genre": "Fiction"
   }'
 ```
@@ -86,22 +86,22 @@ Request Body Parameters:
 |-----------|------|----------|-------------|
 | title | string | Yes | Book title |
 | author | string | Yes | Book author |
-| publishedYear | number | Yes | Year of publication |
+| publishedDate | Date | Yes | Date of publication |
 | genre | string | Yes | 'Fiction' or 'Non-Fiction' |
 
 #### Update Book
 ```bash
-curl -X PUT http://localhost:3000/api/books/ \
+curl -X PUT http://localhost:9000/api/books/ \
   -H "Content-Type: application/json" \
   -d '{
     "title": "Updated Title",
     "author": "Updated Author",
-    "publishedYear": 1925,
+    "publishedDate": "1925-04-10T00:00:00.000Z",
     "genre": "Non-Fiction"
   }'
 ```
 
 #### Delete Book
 ```bash
-curl -X DELETE http://localhost:3000/api/books/:uuid
+curl -X DELETE http://localhost:9000/api/books/:uuid
 ```

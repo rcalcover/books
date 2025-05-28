@@ -95,9 +95,9 @@ export class BooksController {
       this.logger.log(`Book deleted successfully with id: ${req.params.id}`);
       this.httpResponse.sendSuccess(
         res,
-        null,
+        req.params.id,
         'Book deleted successfully',
-        204,
+        200,
       );
     } catch (error) {
       this.logger.error(

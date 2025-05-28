@@ -1,5 +1,7 @@
-import { ZodSchema } from 'zod';
+import z, { ZodSchema } from 'zod';
+import { prettifyError } from 'zod/v4';
 import { Request, Response, NextFunction } from 'express';
+import { logger } from '../utils/logger';
 
 type ValidateSource = 'body' | 'params';
 
@@ -18,6 +20,7 @@ export function Validate(schema: ZodSchema, source: ValidateSource = 'body') {
       const data = source === 'body' ? req.body : req.params;
       const result = schema.safeParse(data);
       if (!result.success) {
+        logger.error(prettifyError(result.error));
         return res.status(400).json({ status: 'fail', error: 'Bad request' });
       }
       if (source === 'body') {

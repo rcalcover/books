@@ -4,7 +4,7 @@ import { BookGenre } from '../factories/book.factory';
 export const createBookSchema = z.object({
   title: z.string().min(1, 'Title is required'),
   author: z.string().min(1, 'Author is required'),
-  publishedDate: z.date(),
+  publishedDate: z.date({coerce: true}),
   genre: z.nativeEnum(BookGenre, {
     errorMap: () => ({ message: 'Invalid book genre' }),
   }),
@@ -13,7 +13,7 @@ export const createBookSchema = z.object({
 export const updateBookSchema = z.object({
   title: z.string().min(1, 'Title is required').optional(),
   author: z.string().min(1, 'Author is required').optional(),
-  publishedDate: z.date().optional(),
+  publishedDate: z.date({coerce: true}).optional(),
   genre: z.nativeEnum(BookGenre, {
     errorMap: () => ({ message: 'Invalid book genre' }),
   }),

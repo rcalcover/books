@@ -21,3 +21,5 @@ export default class Logger implements ILogger {
     this.logger.warn(message);
   }
 }
+
+export const logger = new Logger();

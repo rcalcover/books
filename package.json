@@ -26,8 +26,8 @@
   "homepage": "https://github.com/rcalcover/books#readme",
   "dependencies": {
     "dotenv": "^16.5.0",
-    "drizzle-orm": "^0.43.1",
     "drizzle-kit": "^0.31.1",
+    "drizzle-orm": "^0.43.1",
     "express": "^5.1.0",
     "pino": "^9.7.0",
     "postgres": "^3.4.7",
